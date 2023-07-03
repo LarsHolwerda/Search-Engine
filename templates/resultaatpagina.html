@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Resultaat</title>
+    
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}" />
+
+    </head>
+	<body>
+        
+        <button id="switch" class="button">Switch to dark mode</button>
+        <script type=text/javascript src="{{ url_for('static', filename='script/script.js') }}"></script>
+
+        <div class="search-box">
+            <form method= "POST" action ="resultaatpagina">
+    
+            <input class="search-txt" type="text" name="zoekopdracht" placeholder="Type to search">
+            <a class="search-btn" href="resultaatpagina.html">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+        <h2 id="querytekst" class="querytext">Je hebt gezocht naar: "{{ zoekopdracht }}"</h2>
+        
+        {%for key,doc in similarity.items()%}
+        {%if loop.index < 6:%} 
+        <div class="orderning">
+        <p> Rank: {{loop.index}} | Score: {{doc[0]}} | Bestand: {{key}}</p>
+        <p>Inhoud: {{doc[1]}}</p>
+        <hr>
+        </div>
+        {%endif%}
+        {%endfor%}
+    </body>
+</html>

@@ -1,0 +1,115 @@
+body{
+    background-color:#a6c4ee;
+    color: black;
+}
+
+.button {
+    background-color: #2f3640;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.search-box{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-btn{
+    color:white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 350px;
+}
+
+.querytext{
+    position: absolute;
+    top: 15px;
+}
+
+.orderning{
+    position: relative;
+    top: 100px;
+}
+
+
+body.darkmode {
+    background-color: black;
+    color: #fff;
+}
+
+.nextbtn {
+    background-color: #2f3640;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: absolute;
+    top: 550px;
+    left: 10px;
+    width: 210px;
+  }
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+}
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
